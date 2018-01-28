@@ -62,13 +62,12 @@ class App extends Component {
     }
 
     handleSort(event, index, value) {
-        console.log(value);
         var projects = [];
         if (value === 'percenatge-asc') {
             if (this.state.sort === 'percenatge-dsc') {
                 projects = this.state.projects.reverse();
             } else {
-                projects = this.state.apiData.sort(function (a, b) {
+                projects = this.state.projects.sort(function (a, b) {
                     return parseInt(a['percentage.funded'], 10) - parseInt(b['percentage.funded'], 10);
                 });
             }
@@ -76,7 +75,7 @@ class App extends Component {
             if (this.state.sort === 'percenatge-asc') {
                 projects = this.state.projects.reverse();
             } else {
-                projects = this.state.apiData.sort(function (a, b) {
+                projects = this.state.projects.sort(function (a, b) {
                     return parseInt(b['percentage.funded'], 10) - parseInt(a['percentage.funded'], 10);
                 });
             }
@@ -84,7 +83,7 @@ class App extends Component {
             if (this.state.sort === 'time-dsc') {
                 projects = this.state.projects.reverse();
             } else {
-                projects = this.state.apiData.sort(function (a, b) {
+                projects = this.state.projects.sort(function (a, b) {
                     return new Date(a['end.time']) - new Date(b['end.time']);
                 });
             }
@@ -92,12 +91,12 @@ class App extends Component {
             if (this.state.sort === 'time-asc') {
                 projects = this.state.projects.reverse();
             } else {
-                projects = this.state.apiData.sort(function (a, b) {
+                projects = this.state.projects.sort(function (a, b) {
                     return new Date(b['end.time']) - new Date(a['end.time']);
                 });
             }
         } else {
-            projects = this.state.apiData.sort(function (a, b) {
+            projects = this.state.projects.sort(function (a, b) {
                 return parseInt(a['s.no'], 10) - parseInt(b['s.no'], 10);
             });
         }
