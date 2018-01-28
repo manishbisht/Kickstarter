@@ -10,7 +10,6 @@ Open the online demo [here](https://manishbisht.github.io/Kickstarter)
 - A feature to Search (via name).
 - Implement Sort feature to sort result through ‘percenatge funded’, ‘End Time’ in ascending and descending order).
 - Use your imagination and add features which would make things easier for end users.
-- Implement Sort feature (to filter through ‘score’ in ascending and descending order).
 - Zip all your Source code, Screenshot, & Deployment Instructions and upload.
 - Add autocomplete feature to Search project names conveniently.
 - Custom elegant design, fonts and icons to make web app more user-friendly.
